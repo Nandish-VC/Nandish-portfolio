@@ -1,0 +1,369 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background-color: var(--primary);
+}
+ 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+ 
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+ 
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+ 
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+ 
+.nav-links a:hover {
+  color: var(--accent);
+}
+ 
+.theme-toggle,
+.menu-toggle {
+  border: none;
+  cursor: pointer;
+}
+ 
+.theme-toggle {
+  background: transparent;
+  font-size: 20px;
+}
+ 
+.menu-toggle {
+  display: none;
+  background: transparent;
+  color: white;
+  font-size: 30px;
+}
+ 
+@media (max-width: 768px) {
+ 
+  .menu-toggle {
+    display: block;
+  }
+ 
+  .nav-links {
+    display: none;
+ 
+    position: absolute;
+    top: 70px;
+    left: 0;
+ 
+    width: 100%;
+ 
+    flex-direction: column;
+    gap: 20px;
+ 
+    padding: 20px 0;
+ 
+    background-color: var(--primary);
+ 
+    text-align: center;
+  }
+ 
+  .nav-links.open {
+    display: flex;
+  }
+}
+ 
+/* =========================
+   LIGHT THEME
+========================= */
+ 
+
+ 
+ 
+/* =========================
+   DARK THEME
+========================= */
+ 
+body[data-theme="dark"] {
+ 
+  --primary: #f18f01;
+ 
+  --accent: #ffffff;
+ 
+  --text: #f5f5f5;
+ 
+  --background: #121212;
+ 
+  --card: #242424;
+ 
+  --card-text: #ffffff;
+ 
+  --input-bg: #2b2b2b;
+ 
+  --border: #444444;
+}
+ 
+ 
+/* =========================
+   BODY
+========================= */
+ 
+body {
+ 
+  background-color: var(--background);
+ 
+  color: var(--text);
+ 
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+ 
+ 
+/* =========================
+   NAVBAR
+========================= */
+ 
+.navbar {
+ 
+  background-color: var(--primary);
+ 
+  transition:
+    background-color 0.3s ease;
+}
+.logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 1.7rem;
+
+  font-weight: 700;
+}
+
+ 
+/* =========================
+   SECTIONS
+========================= */
+ 
+.about-section,
+.skills-section,
+.projects-section,
+.contact-section {
+ 
+  background-color: var(--background);
+ 
+  color: var(--text);
+ 
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+ 
+ 
+/* =========================
+   HEADINGS
+========================= */
+ 
+section h2 {
+ 
+  color: var(--text);
+}
+ 
+ 
+/* =========================
+   SKILLS
+========================= */
+ 
+.skill-item {
+ 
+  background-color: var(--card);
+ 
+  color: black;
+ 
+  border-color: var(--primary);
+ 
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+ 
+ 
+/* =========================
+   PROJECT CARDS
+========================= */
+ 
+.project-card {
+ 
+  background-color: var(--card);
+ 
+  color: var(--card-text);
+ 
+  border-color: var(--border);
+ 
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+ 
+.project-card h3,
+.project-card p {
+ 
+  color: var(--card-text);
+}
+ 
+ 
+/* =========================
+   INPUTS
+========================= */
+ 
+.form-group input,
+.form-group textarea,
+.form-group select {
+ 
+  background-color: var(--input-bg);
+ 
+  color: var(--card-text);
+ 
+  border-color: var(--border);
+ 
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+ 
+ 
+/* Placeholder in dark mode */
+ 
+body[data-theme="dark"]
+input::placeholder,
+body[data-theme="dark"]
+textarea::placeholder {
+ 
+  color: #bbbbbb;
+}
+ 
+ 
+/* =========================
+   BUTTONS
+========================= */
+ 
+.btn,
+.btn-primary,
+.btn-secondary {
+ 
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+ 
+ 
+/* =========================
+   DARK MODE HERO
+========================= */
+ 
+body[data-theme="dark"] .hero-section {
+ 
+  background:
+    linear-gradient(
+      135deg,
+      #111827,
+      #1f2937
+    );
+}
+ 
+ 
+/* =========================
+   DARK MODE SKILL BAR
+========================= */
+ 
+body[data-theme="dark"] .skill-bar {
+ 
+  background-color: #444444;
+}
+ 
+ 
+/* =========================
+   DARK MODE PROJECT TAG
+========================= */
+ 
+body[data-theme="dark"] .tag {
+ 
+  background-color: #f18f01;
+ 
+  color: #ffffff;
+}
+ 
+ 
+/* =========================
+   FOOTER
+========================= */
+ 
+.site-footer {
+ 
+  background-color: var(--primary);
+ 
+  color: white;
+ 
+  transition:
+    background-color 0.3s ease;
+}
+ 
+ 
+/* =========================
+   THEME BUTTON
+========================= */
+ 
+.theme-toggle {
+ 
+  background: transparent;
+ 
+  color: white;
+ 
+  border: none;
+ 
+  cursor: pointer;
+ 
+  font-size: 20px;
+ 
+  padding: 8px;
+ 
+  border-radius: 8px;
+ 
+  transition:
+    background-color 0.3s ease;
+}
+ 
+.theme-toggle:hover {
+ 
+  background-color: rgba(255, 255, 255, 0.2);
+}
+ .logo img {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}

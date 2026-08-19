@@ -1,0 +1,184 @@
+.project-section {
+  background:
+    var(--surface-alt);
+
+  padding:
+    80px 24px;
+}
+
+.project-grid {
+  max-width:
+    var(--container-width);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.project-card {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+
+  padding: 20px;
+
+  background: var(--white);
+
+  border:
+    2px solid var(--border);
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform:
+    translateY(-8px);
+
+  border-color:
+    var(--primary);
+
+  box-shadow:
+    0 12px 30px
+    rgba(47, 111, 237, 0.18);
+}
+
+.project-image-wrapper {
+  width: 100%;
+
+  height: 210px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background:
+    var(--surface-alt);
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease;
+}
+
+.project-card:hover img {
+  transform:
+    scale(1.05);
+}
+
+.project-card h3 {
+  color: var(--text);
+
+  text-align: center;
+
+  font-size: 1.3rem;
+}
+
+.project-card p {
+  color: var(--text);
+
+  opacity: 0.8;
+
+  text-align: center;
+
+  line-height: 1.6;
+}
+
+.project-tags {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.tag {
+  background:
+    var(--accent-soft);
+
+  color: #7a4c00;
+
+  padding:
+    5px 12px;
+
+  border-radius: 999px;
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+}
+
+.project-links {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: auto;
+}
+
+.project-links .btn {
+  background:
+    var(--surface-alt);
+
+  border:
+    2px solid var(--border);
+
+  color: var(--text);
+
+  padding:
+    9px 15px;
+
+  margin: 0;
+}
+
+.project-links .btn:hover {
+  background:
+    var(--primary);
+
+  border-color:
+    var(--primary);
+
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    max-width: 500px;
+
+    width: 100%;
+
+    margin: 0 auto;
+  }
+}
