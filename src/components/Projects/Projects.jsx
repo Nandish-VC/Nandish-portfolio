@@ -16,7 +16,7 @@ function Projects() {
       title: "Weather App",
       image: "/weather_app.png",
       description:
-        "A modern weather application that displays weather information using an API.",
+        "A modern weather application that displays weather information using an API(Application Programing Interface).",
       tags: ["React", "API"],
       liveDemo: "#",
       github: "#",
@@ -26,7 +26,7 @@ function Projects() {
       title: "Todo App",
       image: "/todo-app.png",
       description:
-        "A simple and clean task management application for organizing daily tasks.",
+        "A simple and clean task management application for organizing daily tasks to complete.",
       tags: ["React", "JavaScript"],
       liveDemo: "#",
       github: "#",
