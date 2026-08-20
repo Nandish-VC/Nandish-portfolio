@@ -7,7 +7,8 @@ function Navbar() {
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") || "light"
   );
- 
+ const [menuOpen, setMenuOpen]=
+  useState(false);
   // Apply theme whenever it changes
   useEffect(() => {
  
@@ -46,33 +47,31 @@ function Navbar() {
  
  
         {/* Navigation links */}
-        <ul className="nav-links">
+        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+<li>
+<a href="#about" onClick={() => setMenuOpen(false)}>
+      About
+</a>
+</li>
  
-          <li>
-            <a href="#about">
-              About
-            </a>
-          </li>
+  <li>
+<a href="#skills" onClick={() => setMenuOpen(false)}>
+      Skills
+</a>
+</li>
  
-          <li>
-            <a href="#skills">
-              Skills
-            </a>
-          </li>
+  <li>
+<a href="#projects" onClick={() => setMenuOpen(false)}>
+      Projects
+</a>
+</li>
  
-          <li>
-            <a href="#projects">
-              Projects
-            </a>
-          </li>
- 
-          <li>
-            <a href="#contact">
-              Contact
-            </a>
-          </li>
- 
-        </ul>
+  <li>
+<a href="#contact" onClick={() => setMenuOpen(false)}>
+      Contact
+</a>
+</li>
+</ul>
  
  
         {/* Theme button */}
@@ -87,11 +86,14 @@ function Navbar() {
  
         {/* Mobile menu */}
         <button
-          className="menu-toggle"
-          aria-label="Toggle navigation"
-        >
-          ≡
-        </button>
+  type="button"
+  className="menu-toggle"
+  aria-label="Toggle navigation"
+  aria-expanded={menuOpen}
+  onClick={() => setMenuOpen(prev => !prev)}
+>
+  ☰
+</button>
  
       </nav>
  
